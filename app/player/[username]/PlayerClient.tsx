@@ -122,7 +122,7 @@ export default function PlayerClient({ username }: PlayerClientProps) {
 
       <main className={styles.main}>
         <div className={styles.breadcrumb}>
-          <a href="/leaderboards">← Back to Leaderboards</a>
+          <a href="./leaderboards">← Back to Leaderboards</a>
         </div>
 
         <section className={styles.playerSection}>
