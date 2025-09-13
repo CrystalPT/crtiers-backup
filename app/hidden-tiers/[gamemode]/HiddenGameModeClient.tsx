@@ -130,7 +130,7 @@ export default function HiddenGameModeLeaderboard() {
 
       <main className={styles.main}>
         <div className={styles.breadcrumb}>
-          <a href="./hidden-tiers">← Back to Hidden Tiers</a>
+          <a href="../hidden-tiers">← Back to Hidden Tiers</a>
         </div>
 
         <div className={styles.headerSection}>
