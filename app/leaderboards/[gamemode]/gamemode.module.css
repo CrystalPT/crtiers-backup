@@ -14,7 +14,10 @@
   top: 0;
   z-index: 100;
 }
-
+#digma {
+  background-color: black;
+  color: white;
+}
 .nav {
   max-width: 1200px;
   margin: 0 auto;
