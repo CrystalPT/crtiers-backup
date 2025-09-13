@@ -157,7 +157,7 @@ export default function HiddenTiers() {
               return (
                 <a
                   key={gameMode}
-                  href={`/${gameMode}`}
+                  href={`./${gameMode}`}
                   className={`${styles.gameModeCard} card`}
                 >
                   <div className={styles.cardHeader}>
