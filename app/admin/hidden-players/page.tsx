@@ -98,7 +98,7 @@ export default function HiddenPlayersManagement() {
 
     try {
       if (editingPlayer.isNew) {
-        const { id, isNew, ...playerData } = editingPlayer;
+        const { isNew, ...playerData } = editingPlayer;
         const newId = await addHiddenPlayer(playerData);
         if (newId) {
           setSuccess('Hidden player added successfully!');
@@ -160,20 +160,20 @@ export default function HiddenPlayersManagement() {
     setErrors([]);
   };
 
-  const calculateOverallScore = (tiers: any) => {
+  const calculateOverallScore = (tiers: Record<string, number>) => {
     const { overall, ...otherTiers } = tiers;
-    const sum = Object.values(otherTiers).reduce((sum: number, score: any) => sum + (parseInt(score) || 0), 0);
+    const sum = Object.values(otherTiers).reduce((sum: number, score: number) => sum + (score || 0), 0);
     return Math.min(sum, 808);
   };
 
-  const updateEditingPlayer = (field: string, value: any) => {
+  const updateEditingPlayer = (field: string, value: string | number) => {
     if (!editingPlayer) return;
     
     if (field.startsWith('tiers.')) {
       const tierField = field.replace('tiers.', '');
       const updatedTiers = {
         ...editingPlayer.tiers,
-        [tierField]: parseInt(value) || 0
+        [tierField]: parseInt(String(value)) || 0
       };
       
       // Auto-calculate overall score

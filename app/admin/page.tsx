@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getAllPlayers, getAllHiddenPlayers, Player, HiddenPlayer } from '../../lib/firestore';
+import { getAllPlayers, getAllHiddenPlayers } from '../../lib/firestore';
 import styles from './admin.module.css';
 
 export default function AdminDashboard() {

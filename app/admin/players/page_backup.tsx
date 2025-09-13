@@ -106,7 +106,7 @@ export default function PlayersManagement() {
 
     try {
       if (editingPlayer.isNew) {
-        const { id, isNew, ...playerData } = editingPlayer;
+        const { isNew, ...playerData } = editingPlayer;
         const newId = await addPlayer(playerData);
         if (newId) {
           setSuccess('Player added successfully!');
@@ -168,7 +168,7 @@ export default function PlayersManagement() {
     setErrors([]);
   };
 
-  const updateEditingPlayer = (field: string, value: any) => {
+  const updateEditingPlayer = (field: string, value: string | number) => {
     if (!editingPlayer) return;
     
     if (field.startsWith('tiers.')) {
@@ -177,7 +177,7 @@ export default function PlayersManagement() {
         ...editingPlayer,
         tiers: {
           ...editingPlayer.tiers,
-          [tierField]: parseInt(value) || 0
+          [tierField]: parseInt(String(value)) || 0
         }
       });
     } else {
@@ -447,7 +447,7 @@ export default function PlayersManagement() {
                   
                   <div className={styles.actionsCol}>
                     <button onClick={() => handleEdit(player)} className={styles.editBtn}>Edit</button>
-                    <button onClick={() => handleDelete(player)} className={styles.deleteBtn}>Delete</button>
+                    <button onClick={() => handleDeleteClick(player)} className={styles.deleteBtn}>Delete</button>
                   </div>
                 </>
               )}

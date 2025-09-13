@@ -17,15 +17,15 @@ const gameModes = [
   { id: 'mace', name: 'Mace', icon: '🔨' },
 ];
 
-interface PlayerStats {
-  rank: number;
-  tier: string;
-  region: string;
-  wins: number;
-  losses: number;
-  winRate: number;
-  elo: number;
-}
+// interface PlayerStats {
+//   rank: number;
+//   tier: string;
+//   region: string;
+//   wins: number;
+//   losses: number;
+//   winRate: number;
+//   elo: number;
+// }
 
 export default function PlayerProfile() {
   const params = useParams();
