@@ -203,7 +203,7 @@ function GameModeCard({ mode, topPlayer, onSeeMore }: {
       
       <div className={styles.topPlayer}>
         <div className={styles.playerAvatar}>
-          <a href={`/player/${encodeURIComponent(topPlayer.minecraftName)}`}>
+          <a href={`./player/${encodeURIComponent(topPlayer.minecraftName)}`}>
             <img 
               src={`https://mc-heads.net/avatar/${topPlayer.minecraftName}/64`}
               alt={`${topPlayer.minecraftName} avatar`}
