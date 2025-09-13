@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:crystaltiers.com)",
+      "Bash(npm install:*)",
+      "Bash(move page.tsx page_backup.tsx)",
+      "Bash(move page_new.tsx page.tsx)",
+      "Bash(move:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(firebase --version)",
+      "Bash(firebase login:*)",
+      "Bash(firebase projects:list:*)",
+      "Bash(firebase init:*)",
+      "Bash(npm run build:*)",
+      "Bash(git config:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout 120 npm run build)",
+      "Bash(npx next build:*)",
+      "Bash(git pull:*)",
+      "Bash(git checkout:*)",
+      "Bash(curl:*)",
+      "Bash(gh run list:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
